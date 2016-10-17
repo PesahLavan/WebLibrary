@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.pesahlavan.weblibrary.entities.Book" table="book" schema="spring-library">
+        <id name="id" column="id"/>
+        <property name="name" column="name"/>
+        <property name="content" column="content"/>
+        <property name="pageCount" column="page_count"/>
+        <property name="isbn" column="isbn"/>
+        <property name="genreId" column="genre_id"/>
+        <property name="authorId" column="author_id"/>
+        <property name="publishYear" column="publish_year"/>
+        <property name="publisherId" column="publisher_id"/>
+        <property name="image" column="image"/>
+        <property name="descr" column="descr"/>
+        <property name="rating" column="rating"/>
+        <property name="voteCount" column="vote_count"/>
+        <many-to-one name="genreByGenreId" class="com.pesahlavan.weblibrary.entities.Genre">
+            <column name="genre_id"/>
+        </many-to-one>
+        <many-to-one name="authorByAuthorId" class="com.pesahlavan.weblibrary.entities.Author">
+            <column name="author_id"/>
+        </many-to-one>
+        <many-to-one name="publisherByPublisherId" class="com.pesahlavan.weblibrary.entities.Publisher">
+            <column name="publisher_id"/>
+        </many-to-one>
+        <set name="votesById" inverse="true">
+            <key>
+                <column name="book_id"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.pesahlavan.weblibrary.entities.Vote"/>
+        </set>
+    </class>
+</hibernate-mapping>
