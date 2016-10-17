@@ -43,7 +43,7 @@
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.1.163" level="application_server_libraries" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.2.10" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.2.10" level="project" />
-    <orderEntry type="library" name="Maven: org.primefaces:primefaces:5.1" level="project" />
+    <orderEntry type="library" name="Maven: org.primefaces:primefaces:5.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.3.RELEASE" level="project" />
@@ -71,5 +71,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: log4j:log4j:1.2.15" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.16.10" level="project" />
+    <orderEntry type="library" name="Primefaces" level="project" />
   </component>
 </module>
