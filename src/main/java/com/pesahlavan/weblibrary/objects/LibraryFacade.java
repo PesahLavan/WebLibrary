@@ -14,6 +14,7 @@ import java.util.List;
 @Scope("singleton")
 public class LibraryFacade {
 
+    private static final String FIELD_CONTENT = "content";
 
     @Autowired
     private BookDAO bookDAO;
@@ -52,6 +53,9 @@ public class LibraryFacade {
 
     }
 
+    public byte[] getContent(long id){
+        return (byte[])bookDAO.getFieldValue(id, FIELD_CONTENT);
+    }
 
 
 
