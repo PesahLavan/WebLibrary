@@ -2,6 +2,7 @@ package com.pesahlavan.weblibrary.objects;
 
 
 import com.pesahlavan.weblibrary.dao.interfaces.BookDAO;
+import com.pesahlavan.weblibrary.entities.Author;
 import com.pesahlavan.weblibrary.entities.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -33,6 +34,24 @@ public class LibraryFacade {
     public void searchBooksByLetter() {
         books = bookDAO.getBooks(searchCriteria.getLetter());
     }
+
+    public void searchBooksByGenre() {
+        books = bookDAO.getBooks(searchCriteria.getGenre());
+    }
+
+    public void searchBooksByText() {
+
+        switch (searchCriteria.getSearchType()){
+            case TITLE:
+                books = bookDAO.getBooks(searchCriteria.getText());
+                break;
+            case AUTHOR:
+                books = bookDAO.getBooks(new Author(searchCriteria.getText()));
+                break;
+        }
+
+    }
+
 
 
 }

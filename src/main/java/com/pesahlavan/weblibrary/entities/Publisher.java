@@ -40,4 +40,8 @@ public class Publisher {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
 }

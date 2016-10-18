@@ -12,6 +12,10 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+
 
     <servlet>
         <servlet-name>dispatcher</servlet-name>
@@ -52,8 +56,10 @@
     </welcome-file-list>
 
 
-
-
+    <context-param>
+        <param-name>primefaces.THEME</param-name>
+        <param-value>library</param-value>
+    </context-param>
 
 
 </web-app>

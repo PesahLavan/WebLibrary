@@ -46,8 +46,8 @@ public class Author {
         Author author = (Author) o;
 
         if (id != author.id) return false;
-        if (fio != null ? !fio.equals(author.fio) : author.fio != null) return false;
         if (birthday != null ? !birthday.equals(author.birthday) : author.birthday != null) return false;
+        if (fio != null ? !fio.equals(author.fio) : author.fio != null) return false;
 
         return true;
     }
@@ -59,6 +59,7 @@ public class Author {
         result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
         return result;
     }
+
     @Override
     public String toString() {
         return fio;
