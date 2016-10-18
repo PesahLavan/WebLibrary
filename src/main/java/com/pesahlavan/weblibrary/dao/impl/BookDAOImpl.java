@@ -38,7 +38,6 @@ public class BookDAOImpl implements BookDAO {
         bookProjection.add(Projections.property("voteCount"), "voteCount");
     }
 
-
     @Transactional
     @Override
     public List<Book> getBooks() {

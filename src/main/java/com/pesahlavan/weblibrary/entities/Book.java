@@ -3,7 +3,8 @@ package com.pesahlavan.weblibrary.entities;
 import java.io.Serializable;
 import java.util.Arrays;
 
-public class Book implements Serializable{
+public class Book implements Serializable {
+
     private Long id;
     private Author author;
     private Genre genre;
@@ -17,6 +18,10 @@ public class Book implements Serializable{
     private String descr;
     private Integer rating;
     private Long voteCount;
+
+    public Book() {
+    }
+
 
     public Book(Long id, Author author, Genre genre, Publisher publisher, String name, byte[] content, Integer pageCount, String isbn, Integer publishYear, byte[] image, String descr, Integer rating, Long voteCount) {
         this.id = id;
@@ -32,9 +37,6 @@ public class Book implements Serializable{
         this.descr = descr;
         this.rating = rating;
         this.voteCount = voteCount;
-    }
-
-    public Book() {
     }
 
     public Long getId() {
