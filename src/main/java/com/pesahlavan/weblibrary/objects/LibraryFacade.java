@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+@Component("libraryFacade")
 @Scope("singleton")
 public class LibraryFacade {
 
@@ -54,4 +54,6 @@ public class LibraryFacade {
 
 
 
+
 }
+

@@ -75,6 +75,7 @@ public class BookDAOImpl implements BookDAO {
 
     }
 
+
     private DetachedCriteria createBookCriteria(){
         DetachedCriteria bookListCriteria = DetachedCriteria.forClass(Book.class, "b");
         createAliases(bookListCriteria);
