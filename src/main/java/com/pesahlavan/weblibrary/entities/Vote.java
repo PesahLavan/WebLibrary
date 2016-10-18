@@ -5,7 +5,6 @@ public class Vote {
     private Integer value;
     private long bookId;
     private String username;
-    private Book bookByBookId;
 
     public long getId() {
         return id;
@@ -61,13 +60,5 @@ public class Vote {
         result = 31 * result + (int) (bookId ^ (bookId >>> 32));
         result = 31 * result + (username != null ? username.hashCode() : 0);
         return result;
-    }
-
-    public Book getBookByBookId() {
-        return bookByBookId;
-    }
-
-    public void setBookByBookId(Book bookByBookId) {
-        this.bookByBookId = bookByBookId;
     }
 }

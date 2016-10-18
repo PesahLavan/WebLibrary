@@ -1,14 +1,11 @@
 package com.pesahlavan.weblibrary.entities;
 
 import java.sql.Date;
-import java.util.Collection;
 
 public class Author {
     private long id;
     private String fio;
     private Date birthday;
-    private Collection<Book> booksById;
-    private Collection<Genre> genresById;
 
     public long getId() {
         return id;
@@ -56,19 +53,4 @@ public class Author {
         return result;
     }
 
-    public Collection<Book> getBooksById() {
-        return booksById;
-    }
-
-    public void setBooksById(Collection<Book> booksById) {
-        this.booksById = booksById;
-    }
-
-    public Collection<Genre> getGenresById() {
-        return genresById;
-    }
-
-    public void setGenresById(Collection<Genre> genresById) {
-        this.genresById = genresById;
-    }
 }

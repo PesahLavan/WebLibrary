@@ -1,7 +1,6 @@
 package com.pesahlavan.weblibrary.entities;
 
 import java.util.Arrays;
-import java.util.Collection;
 
 public class Book {
     private long id;
@@ -17,10 +16,6 @@ public class Book {
     private String descr;
     private Integer rating;
     private Long voteCount;
-    private Genre genreByGenreId;
-    private Author authorByAuthorId;
-    private Publisher publisherByPublisherId;
-    private Collection<Vote> votesById;
 
     public long getId() {
         return id;
@@ -168,35 +163,4 @@ public class Book {
         return result;
     }
 
-    public Genre getGenreByGenreId() {
-        return genreByGenreId;
-    }
-
-    public void setGenreByGenreId(Genre genreByGenreId) {
-        this.genreByGenreId = genreByGenreId;
-    }
-
-    public Author getAuthorByAuthorId() {
-        return authorByAuthorId;
-    }
-
-    public void setAuthorByAuthorId(Author authorByAuthorId) {
-        this.authorByAuthorId = authorByAuthorId;
-    }
-
-    public Publisher getPublisherByPublisherId() {
-        return publisherByPublisherId;
-    }
-
-    public void setPublisherByPublisherId(Publisher publisherByPublisherId) {
-        this.publisherByPublisherId = publisherByPublisherId;
-    }
-
-    public Collection<Vote> getVotesById() {
-        return votesById;
-    }
-
-    public void setVotesById(Collection<Vote> votesById) {
-        this.votesById = votesById;
-    }
 }

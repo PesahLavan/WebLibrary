@@ -1,11 +1,8 @@
 package com.pesahlavan.weblibrary.entities;
 
-import java.util.Collection;
-
 public class Publisher {
     private long id;
     private String name;
-    private Collection<Book> booksById;
 
     public long getId() {
         return id;
@@ -43,11 +40,4 @@ public class Publisher {
         return result;
     }
 
-    public Collection<Book> getBooksById() {
-        return booksById;
-    }
-
-    public void setBooksById(Collection<Book> booksById) {
-        this.booksById = booksById;
-    }
 }

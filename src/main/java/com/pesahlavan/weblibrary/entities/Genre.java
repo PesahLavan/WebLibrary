@@ -1,13 +1,9 @@
 package com.pesahlavan.weblibrary.entities;
 
-import java.util.Collection;
-
 public class Genre {
     private long id;
     private String name;
     private Long parent;
-    private Collection<Book> booksById;
-    private Author authorByParent;
 
     public long getId() {
         return id;
@@ -53,21 +49,5 @@ public class Genre {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (parent != null ? parent.hashCode() : 0);
         return result;
-    }
-
-    public Collection<Book> getBooksById() {
-        return booksById;
-    }
-
-    public void setBooksById(Collection<Book> booksById) {
-        this.booksById = booksById;
-    }
-
-    public Author getAuthorByParent() {
-        return authorByParent;
-    }
-
-    public void setAuthorByParent(Author authorByParent) {
-        this.authorByParent = authorByParent;
     }
 }
