@@ -15,8 +15,9 @@
 
     <faces:flow-builder-services id="flowBuilderServices" development="true" />
 
-    <!-- A listener to create and release a FacesContext -->
     <beans:bean id="facesContextListener" class="org.springframework.faces.webflow.FlowFacesContextLifecycleListener"/>
+
+
 
     <flow-executor id="flowExecutor">
         <flow-execution-listeners>
